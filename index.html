@@ -1,18 +1,1018 @@
-<!doctype html>
-<html lang="de" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STN Solar | Die Zukunft der Energie</title>
-    <meta name="description" content="Premium Solarlösungen – Deutsche Ingenieurskunst mit der Kraft der Sonne." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400;1,9..40,500&family=Space+Grotesk:wght@300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+
+<html class="dark" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STN Solar | Die Zukunft der Energie</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Space+Grotesk:wght@300;500;700&amp;family=DM+Sans:wght@300;400;500;700;900&amp;family=DM+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#b1c7ef",
+              "primary-fixed-dim": "#ebc153",
+              "outline-variant": "#4d4636",
+              "surface-tint": "#ebc153",
+              "on-background": "#e5e2e1",
+              "tertiary": "#d5e3ff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "surface": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "primary": "#ffdf93",
+              "on-surface-variant": "#d1c5b0",
+              "on-tertiary-container": "#3d5375",
+              "surface-container-highest": "#353535",
+              "on-primary": "#3e2e00",
+              "on-secondary-fixed": "#261900",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#313030",
+              "surface-container": "#20201f",
+              "secondary-container": "#604403",
+              "error": "#ffb4ab",
+              "on-tertiary": "#1a3151",
+              "on-tertiary-fixed": "#011b3b",
+              "on-tertiary-fixed-variant": "#324769",
+              "on-primary-container": "#674f00",
+              "on-primary-fixed": "#251a00",
+              "surface-container-lowest": "#0e0e0e",
+              "error-container": "#93000a",
+              "surface-bright": "#393939",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-fixed": "#d5e3ff",
+              "tertiary-fixed-dim": "#b1c7f0",
+              "primary-container": "#ebc153",
+              "inverse-primary": "#765a00",
+              "on-secondary": "#412d00",
+              "on-secondary-container": "#dab36a",
+              "outline": "#9a907c",
+              "on-surface": "#e5e2e1",
+              "primary-fixed": "#ffdf95",
+              "surface-dim": "#131313",
+              "secondary-fixed-dim": "#e9c176",
+              "surface-container-low": "#1c1b1b",
+              "on-primary-fixed-variant": "#594400",
+              "on-error": "#690005",
+              "secondary": "#e9c176",
+              "secondary-fixed": "#ffdea5",
+              "background": "#131313",
+              "surface-variant": "#353535"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .liquid-glass:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(255, 223, 147, 0.1);
+        }
+        .header-liquid-glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(245, 197, 24, 0.8);
+        }
+        .star-glow {
+            filter: drop-shadow(0 0 8px rgba(245, 197, 24, 0.6));
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cta-button {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .cta-button:hover {
+            transform: translateY(-4px);
+            color: #F5C518;
+            text-shadow: 0 0 12px rgba(245, 197, 24, 0.6);
+            border-color: rgba(245, 197, 24, 0.5);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .feature-card {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(255, 223, 147, 0.05);
+        }
+
+        .slide {
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .slide-hidden {
+            opacity: 0;
+            transform: scale(0.98) translateY(10px);
+            pointer-events: none;
+        }
+        .slide-visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .slider-dot {
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+        }
+        .slider-dot.active {
+            width: 24px;
+            background-color: #F5C518;
+        }
+        .slider-dot.inactive {
+            width: 8px;
+            background-color: #F5C518;
+            opacity: 0.4;
+        }
+
+        .customer-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .customer-card:hover {
+            background: rgba(255, 255, 255, 0.09);
+            transform: translateY(-5px);
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 3s infinite ease-in-out;
+        }
+
+        /* Stats section grid background */
+        .stats-grid-section {
+            background-color: #f0efed;
+            background-image:
+                linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        /* Subtle edge fade – keeps grid visible in center */
+        .stats-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 55%, #f0efed 88%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Logo marquee */
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        #logo-track { animation: marquee 28s linear infinite; }
+
+        /* Light section cards */
+        .light-card { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .light-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px -8px rgba(0,0,0,0.12); }
+
+        /* Service tabs */
+        .svc-tab.active-tab { background:rgba(245,176,64,0.1)!important; border-color:rgba(245,176,64,0.3)!important; color:#e07018!important; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Floating TopAppBar -->
+<div class="fixed top-0 left-0 right-0 z-50 px-4 py-6 flex justify-center pointer-events-none">
+<header class="header-liquid-glass w-full max-w-5xl rounded-full px-6 py-3 flex justify-between items-center shadow-2xl pointer-events-auto">
+<div class="text-xl md:text-2xl font-black text-white tracking-tighter flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ffdf93]" data-icon="lightbulb">lightbulb</span>
+<span class="font-headline">STN Solar</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<a class="hover:text-primary transition-colors" href="#">Solar-Lösungen</a>
+<a class="hover:text-primary transition-colors" href="#">Performance</a>
+<a class="hover:text-primary transition-colors" href="#">Kundenfeedback</a>
+</nav>
+<button class="cta-button bg-[#131313] text-white px-5 py-2 rounded-full font-label text-[10px] md:text-xs font-bold tracking-widest uppercase active:scale-95 border border-white/10">
+            Jetzt starten ☀
+        </button>
+</header>
+</div>
+<main class="relative min-h-screen overflow-x-hidden">
+<!-- Hero Background -->
+<div class="fixed inset-0 z-0">
+<img alt="Modern architectural house" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6Xq-Haq8zHqKbEtkBdfCGPcx5rVOnDx8MCtlAG4vak1TgE1xvJpOei5LEOubNvKLX5gzu3Q-hys9edqnsMFmrujwhbDJ-BZQYNoYbSpYahkmaxtnzxovf7RNsd_SNoPNsD7CjTHc88rM4sBGsMkkhCkc6svaEIDglvGSlFkcBcC5-QEMvdrNL8ARShCVRD2qRuG05OulO0YUwtgZW8Dnon-psKDWU-OjV4mPMZaGv0G8Hf6ZrF-0gQkwYimGHFdpgIK1ZaS-k95A"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background"></div>
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+</div>
+<!-- Hero Content -->
+<section class="relative z-10 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-between pt-32">
+<div class="reveal active mt-4">
+<h1 class="font-black text-[14vw] md:text-8xl leading-[0.85] tracking-tighter flex flex-col">
+<span class="text-white">Deine Solarlösung -</span>
+<span class="text-white">Alles aus einer Hand.</span>
+</h1>
+<p class="mt-8 text-on-surface-variant font-body text-lg max-w-md leading-relaxed">
+                Wir vereinen deutsche Ingenieurskunst mit der Kraft der Sonne. Effizient, ästhetisch und für Generationen gebaut.
+            </p>
+</div>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 pb-12">
+<!-- 1. Product Slider Card -->
+<div class="liquid-glass rounded-xl p-8 flex flex-col min-h-[480px] lg:row-span-2 shadow-2xl reveal active mt-4" style="transition-delay: 0.1s;">
+<div class="relative h-full flex flex-col" id="product-slider">
+<div class="relative flex-grow flex flex-col"><!-- Slide 1 -->
+<div class="slide slide-visible absolute inset-0 flex flex-col items-center justify-center text-center p-4" data-index="0">
+<div class="absolute inset-0 z-0 opacity-20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[120px]">battery_charging_full</span>
+</div>
+<div class="relative z-10">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full font-label text-[10px] uppercase tracking-widest border border-primary/20">SPEICHER</span>
+<h3 class="text-3xl font-bold mt-4 text-white leading-tight">SMA Home Storage</h3>
+<div class="mt-4 space-y-1 text-on-surface-variant text-sm font-medium">
+<p>✓ Bis zu 16,98 kWh Kapazität</p>
+<p>✓ 8.000 Ladezyklen</p>
+<p>✓ 10 Jahre Garantie</p>
+</div>
+<a class="group inline-flex items-center gap-2 text-primary font-label text-[10px] uppercase tracking-[0.2em] font-bold mt-6 hover:underline" href="#">DETAILS ANSEHEN →</a>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="slide slide-hidden absolute inset-0 flex flex-col items-center justify-center text-center p-4" data-index="1">
+<div class="absolute inset-0 z-0 opacity-20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[120px]">solar_power</span>
+</div>
+<div class="relative z-10">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full font-label text-[10px] uppercase tracking-widest border border-primary/20">SOLARMODULE</span>
+<h3 class="text-3xl font-bold mt-4 text-white leading-tight">Trina Vertex S+</h3>
+<div class="mt-4 space-y-1 text-on-surface-variant text-sm font-medium">
+<p>✓ 22% Modulwirkungsgrad</p>
+<p>✓ Full Black Bifazial</p>
+<p>✓ 25 Jahre Garantie</p>
+</div>
+<a class="group inline-flex items-center gap-2 text-primary font-label text-[10px] uppercase tracking-[0.2em] font-bold mt-6 hover:underline" href="#">DETAILS ANSEHEN →</a>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide slide-hidden absolute inset-0 flex flex-col items-center justify-center text-center p-4" data-index="2">
+<div class="absolute inset-0 z-0 opacity-20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[120px]">settings_input_component</span>
+</div>
+<div class="relative z-10">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full font-label text-[10px] uppercase tracking-widest border border-primary/20">WECHSELRICHTER</span>
+<h3 class="text-3xl font-bold mt-4 text-white leading-tight">SMA STP10.0</h3>
+<div class="mt-4 space-y-1 text-on-surface-variant text-sm font-medium">
+<p>✓ 98,1% Wirkungsgrad</p>
+<p>✓ Smart Home Ready</p>
+<p>✓ WLAN &amp; Ethernet</p>
+</div>
+<a class="group inline-flex items-center gap-2 text-primary font-label text-[10px] uppercase tracking-[0.2em] font-bold mt-6 hover:underline" href="#">DETAILS ANSEHEN →</a>
+</div>
+</div></div>
+<!-- Navigation Dots -->
+<div class="flex gap-2 justify-center mt-12 mb-2">
+<button class="slider-dot active h-2 rounded-full" data-slide="0"></button>
+<button class="slider-dot inactive h-2 rounded-full" data-slide="1"></button>
+<button class="slider-dot inactive h-2 rounded-full" data-slide="2"></button>
+</div>
+</div>
+</div>
+<!-- 2. Customer Reviews Card -->
+<div class="liquid-glass rounded-xl p-6 flex flex-col justify-between shadow-xl reveal active min-h-[220px] mt-4" style="transition-delay: 0.2s;">
+<div class="relative h-full" id="review-slider">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-primary text-xl">account_circle</span>
+</div>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">KUNDENERFAHRUNGEN</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-white font-bold text-lg">4.8</span>
+<span class="material-symbols-outlined text-[#F5C518] text-lg star-glow" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<div class="relative h-20 overflow-hidden">
+<div class="review-slide absolute inset-0 transition-all duration-700 opacity-100 translate-x-0">
+<p class="text-sm text-white italic leading-relaxed font-medium">"Ästhetisch die schönste Lösung am Markt. Sieht toll aus!"</p>
+<p class="text-[10px] text-primary mt-3 uppercase tracking-widest font-bold">- Lukas Müller</p>
+</div>
+<div class="review-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-8 pointer-events-none">
+<p class="text-sm text-white italic leading-relaxed font-medium">"Hervorragender Service von der Planung bis zum Anschluss."</p>
+<p class="text-[10px] text-primary mt-3 uppercase tracking-widest font-bold">- Markus Weber</p>
+</div>
+<div class="review-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-8 pointer-events-none">
+<p class="text-sm text-white italic leading-relaxed font-medium">"Endlich unabhängig vom Stromnetz. Beste Investition."</p>
+<p class="text-[10px] text-primary mt-3 uppercase tracking-widest font-bold">- Sarah Jenkins</p>
+</div>
+</div>
+<a class="text-primary font-label text-[10px] font-bold uppercase tracking-widest mt-4 flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
+                        BEWERTUNGEN LESEN <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- 3. Performance Card (Right) -->
+<div class="liquid-glass rounded-xl p-6 shadow-xl relative overflow-hidden reveal active min-h-[220px] mt-4" style="transition-delay: 0.3s;">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-primary font-label text-[10px] font-bold uppercase tracking-widest">PERFORMANCE</span>
+<!-- Contextual Weather Icon -->
+</div>
+<div class="h-10 relative mt-2" id="benefit-ticker">
+<h4 class="benefit-text absolute inset-0 text-2xl font-black text-white transition-all duration-700 opacity-100 translate-y-0">99% EFFIZIENZ</h4>
+<h4 class="benefit-text absolute inset-0 text-2xl font-black text-white transition-all duration-700 opacity-0 translate-y-8">2.400€ SPAREN/J</h4>
+<h4 class="benefit-text absolute inset-0 text-2xl font-black text-white transition-all duration-700 opacity-0 translate-y-8">TOP QUALITÄT</h4>
+</div>
+</div>
+<div class="flex gap-4 mt-auto"><span class="material-symbols-outlined text-primary/80 text-xl">trending_up</span>
+<span class="material-symbols-outlined text-white/40 text-xl">bolt</span>
+<span class="material-symbols-outlined text-white/40 text-xl">verified</span></div>
+</div>
+<!-- Sleek Graphen Line Chart -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-40 bottom-0 top-auto h-1/2">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="lineGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#F5C518;stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:#F5C518;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#F5C518;stop-opacity:0.2"></stop>
+</lineargradient>
+</defs>
+<path d="M0 80 Q 25 70, 40 85 T 70 30 T 100 10" fill="none" id="graph-line" stroke="url(#lineGrad)" stroke-width="1.5" style="stroke-dasharray: 200; stroke-dashoffset: 200; transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1);"></path>
+<path class="opacity-10" d="M0 100 L 0 80 Q 25 70, 40 85 T 70 30 T 100 10 L 100 100 Z" fill="url(#lineGrad)"></path>
+</svg>
+</div>
+</div>
+<!-- 4. Main Product Feature Card -->
+<div class="feature-card bg-surface-container rounded-xl p-8 shadow-2xl lg:col-span-2 flex flex-col md:flex-row items-center gap-12 border border-white/5 reveal active mt-4" style="transition-delay: 0.4s;">
+<div class="flex-1 text-center md:text-left">
+<span class="font-label text-xs text-primary uppercase tracking-[0.2em]">INNOVATION 2024</span>
+<h3 class="text-4xl font-bold text-white mt-4 leading-tight">Smart Solar Speicherbatterie</h3>
+<p class="mt-6 text-on-surface-variant leading-relaxed text-lg">
+                        Kompakt, skalierbar und hocheffizient. Nutzen Sie Ihren Sonnenstrom auch nachts mit unserem preisgekrönten Speichersystem.
+                    </p>
+<button class="cta-button mt-10 bg-white/5 hover:bg-white/10 text-white px-8 py-3.5 rounded-full font-label text-xs uppercase tracking-widest border border-white/10 active:scale-95 transition-all">
+                        DETAILS ANSEHEN
+                    </button>
+</div>
+<div class="flex-1 w-full max-w-[340px]">
+<div class="relative group">
+<div class="absolute -inset-1 bg-primary/20 blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+<img alt="Futuristic Solar Battery" class="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGa7gXnvuLmo3_aJVB7jybmm3jKMPWGzbFcOTn3tvgLOt29ssG3w7Qrg0u5RzX5ujk90id6QkEhnNamCMKpgWpFNTU3qS8WwN96DIlLzO0ZgQgJK4cZ-sB9mUrEBj9Qx8bqOAi8Kp5cqdvooEDiWX8AxPsx5AWu-PZ3dGjK-ddLhpbuN0p674pF9No8AGGkrN7Odq8iDXM8FAF2r7iXjkja1qD_g4gKT0A5U7x0FqXrJBbOVOFBER8JbIn_qPX6Wg52ouy8VuRvxtV"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── Social Proof / Grid Visual Section ── -->
+<section class="stats-grid-section relative z-10 overflow-hidden" style="padding:6rem 1.5rem 5rem;position:relative;">
+
+  <!-- Headline -->
+  <div class="max-w-5xl mx-auto text-center reveal" style="margin-bottom:4rem;position:relative;z-index:2;">
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:rgba(26,26,26,0.4);">Ergebnisse</span>
+    <h2 style="font-family:'DM Sans',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.5rem 0 1rem;line-height:1.05;">
+      Über <span id="customer-counter" style="background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0</span><span style="background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">+</span> zufriedene Kunden.<br>In NRW und darüber hinaus.
+    </h2>
+    <!-- Trust badges -->
+    <div id="counter-trigger" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem;margin-top:1.5rem;opacity:0.5;">
+      <div style="display:flex;align-items:center;gap:0.4rem;color:#1a1a1a;">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-2.21 5.39-7.84 5.39-4.84 0-8.79-4.01-8.79-8.97s3.95-8.97 8.79-8.97c2.75 0 4.59 1.17 5.64 2.18l2.59-2.5c-1.66-1.55-3.82-2.5-8.23-2.5C5.41 0 0 5.41 0 12s5.41 12 12 12c6.88 0 11.45-4.84 11.45-11.66 0-.78-.08-1.38-.24-2.03h-10.73z"/></svg>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Google</span>
+      </div>
+      <div style="width:1px;height:1rem;background:rgba(0,0,0,0.15);"></div>
+      <div style="display:flex;align-items:center;gap:0.4rem;color:#1a1a1a;">
+        <span class="material-symbols-outlined" style="font-size:14px;">verified_user</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Trusted Shops</span>
+      </div>
+      <div style="width:1px;height:1rem;background:rgba(0,0,0,0.15);"></div>
+      <div style="display:flex;align-items:center;gap:0.4rem;color:#1a1a1a;">
+        <span class="material-symbols-outlined" style="font-size:14px;">grade</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Trustpilot</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Central Visual with floating cards ── -->
+  <div class="max-w-5xl mx-auto" style="position:relative;">
+
+    <!-- Grid overlay -->
+    <div class="stats-grid-overlay" aria-hidden="true"></div>
+
+    <!-- === CENTRAL MOCKUP CARD === -->
+    <div class="reveal" style="display:flex;justify-content:center;position:relative;z-index:2;padding:3.5rem 1rem 4rem;">
+
+      <!-- Solar Dashboard mockup -->
+      <div style="width:100%;max-width:420px;border-radius:1.5rem;overflow:hidden;background:#1c1c1e;box-shadow:0 32px 80px -12px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.1);position:relative;">
+        <!-- Window chrome -->
+        <div style="background:#252527;padding:0.75rem 1rem;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+          <div style="flex:1;height:22px;background:rgba(255,255,255,0.06);border-radius:6px;margin-left:0.5rem;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:'DM Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);">stn-solar.de/monitor</span>
+          </div>
+        </div>
+        <!-- Dashboard content -->
+        <div style="padding:1.25rem 1.25rem 1.5rem;">
+          <!-- Top row -->
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem;">
+            <div>
+              <p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin:0 0 0.3rem;">Aktuelle Leistung</p>
+              <div style="display:flex;align-items:baseline;gap:0.3rem;">
+                <span id="live-kw" style="font-family:'DM Sans',sans-serif;font-size:2.2rem;font-weight:900;letter-spacing:-0.04em;color:#fff;line-height:1;">4.7</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:rgba(255,255,255,0.45);">kW</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(40,200,64,0.12);border:1px solid rgba(40,200,64,0.25);border-radius:9999px;padding:0.3rem 0.7rem;">
+              <div style="width:6px;height:6px;border-radius:50%;background:#28c840;box-shadow:0 0 6px #28c840;"></div>
+              <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#28c840;">Live</span>
+            </div>
+          </div>
+          <!-- Bar chart -->
+          <div style="margin-bottom:1.25rem;">
+            <p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin:0 0 0.6rem;">Tagesertrag kWh</p>
+            <div style="display:flex;align-items:flex-end;gap:4px;height:52px;">
+              <div style="flex:1;background:rgba(245,176,64,0.25);border-radius:4px 4px 0 0;height:40%;"></div>
+              <div style="flex:1;background:rgba(245,176,64,0.35);border-radius:4px 4px 0 0;height:55%;"></div>
+              <div style="flex:1;background:rgba(245,176,64,0.45);border-radius:4px 4px 0 0;height:70%;"></div>
+              <div style="flex:1;background:rgba(245,176,64,0.55);border-radius:4px 4px 0 0;height:62%;"></div>
+              <div style="flex:1;background:rgba(245,176,64,0.7);border-radius:4px 4px 0 0;height:85%;"></div>
+              <div style="flex:1;background:linear-gradient(to top,#e07018,#f5b040);border-radius:4px 4px 0 0;height:100%;position:relative;"><div style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:8px;color:#f5b040;white-space:nowrap;font-weight:700;">18.4</div></div>
+              <div style="flex:1;background:rgba(245,176,64,0.2);border-radius:4px 4px 0 0;height:30%;"></div>
+            </div>
+            <div style="display:flex;gap:4px;margin-top:4px;">
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">Mo</div>
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">Di</div>
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">Mi</div>
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">Do</div>
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">Fr</div>
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">Sa</div>
+              <div style="flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,0.25);">So</div>
+            </div>
+          </div>
+          <!-- Bottom row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:0.75rem;padding:0.75rem;">
+              <p style="font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin:0 0 0.3rem;">Speicher</p>
+              <div style="display:flex;align-items:center;gap:0.4rem;">
+                <span class="material-symbols-outlined" style="font-size:14px;color:#f5b040;">battery_charging_full</span>
+                <span style="font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:900;color:#fff;">78%</span>
+              </div>
+              <div style="height:4px;background:rgba(255,255,255,0.08);border-radius:9999px;margin-top:0.4rem;"><div style="height:100%;width:78%;background:linear-gradient(to right,#f5b040,#28c840);border-radius:9999px;"></div></div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:0.75rem;padding:0.75rem;">
+              <p style="font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin:0 0 0.3rem;">Einspeisung</p>
+              <div style="display:flex;align-items:center;gap:0.4rem;">
+                <span class="material-symbols-outlined" style="font-size:14px;color:#4a9eff;">electric_bolt</span>
+                <span style="font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:900;color:#fff;">2.1 kW</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.3rem;margin-top:0.35rem;"><span style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(74,158,255,0.8);">↑ aktiv</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === FLOATING CARD: Jährliche Ersparnis (bottom-left) === -->
+      <div class="float-card reveal" style="position:absolute;bottom:-1.5rem;left:0;max-width:188px;background:#fff;border-radius:1rem;padding:1rem;box-shadow:0 16px 40px -8px rgba(0,0,0,0.25);border:1px solid rgba(0,0,0,0.07);z-index:3;">
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(26,26,26,0.4);margin:0 0 0.6rem;">Jährliche Ersparnis</p>
+        <!-- Mini gauge -->
+        <div style="position:relative;width:80px;height:44px;overflow:hidden;margin:0 auto 0.5rem;">
+          <svg viewBox="0 0 80 44" width="80" height="44">
+            <path d="M8 40 A32 32 0 0 1 72 40" fill="none" stroke="rgba(0,0,0,0.07)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M8 40 A32 32 0 0 1 72 40" fill="none" stroke="url(#gGrad)" stroke-width="7" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="25"/>
+            <defs><linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f5b040"/><stop offset="100%" stop-color="#e07018"/></linearGradient></defs>
+          </svg>
+          <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);text-align:center;">
+            <span style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:900;color:#1a1a1a;letter-spacing:-0.03em;">€2.400</span>
+          </div>
+        </div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:700;color:rgba(26,26,26,0.4);text-align:center;text-transform:uppercase;letter-spacing:0.15em;">Überdurchschnittlich</p>
+      </div>
+
+      <!-- === FLOATING BADGE: Anlage aktiv (top center-left) === -->
+      <div class="float-card reveal" style="position:absolute;top:-1rem;left:50%;transform:translateX(-60%);background:#fff;border-radius:9999px;padding:0.5rem 0.9rem;display:flex;align-items:center;gap:0.5rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);border:1px solid rgba(0,0,0,0.07);z-index:4;white-space:nowrap;">
+        <div style="width:7px;height:7px;border-radius:50%;background:#28c840;box-shadow:0 0 6px #28c840;"></div>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;color:#1a1a1a;">Anlage aktiv · Neuss, NRW</span>
+      </div>
+
+      <!-- === FLOATING CARD: Performance (right) === -->
+      <div class="float-card reveal" style="position:absolute;top:1.5rem;right:0;max-width:168px;background:#fff;border-radius:1rem;padding:1rem;box-shadow:0 16px 40px -8px rgba(0,0,0,0.22);border:1px solid rgba(0,0,0,0.07);z-index:3;">
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(26,26,26,0.4);margin:0 0 0.6rem;">Jahresertrag</p>
+        <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.6rem;">
+          <span style="font-family:'DM Sans',sans-serif;font-size:1.4rem;font-weight:900;color:#1a1a1a;letter-spacing:-0.04em;">▲18%</span>
+        </div>
+        <!-- Mini bar chart -->
+        <div style="display:flex;align-items:flex-end;gap:3px;height:32px;">
+          <div style="flex:1;background:#f5b040;opacity:0.3;border-radius:3px 3px 0 0;height:50%;"></div>
+          <div style="flex:1;background:#f5b040;opacity:0.45;border-radius:3px 3px 0 0;height:65%;"></div>
+          <div style="flex:1;background:#f5b040;opacity:0.6;border-radius:3px 3px 0 0;height:80%;"></div>
+          <div style="flex:1;background:#f5b040;opacity:0.75;border-radius:3px 3px 0 0;height:90%;"></div>
+          <div style="flex:1;background:linear-gradient(to top,#e07018,#f5b040);border-radius:3px 3px 0 0;height:100%;"></div>
+        </div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:8px;color:rgba(26,26,26,0.35);margin-top:0.4rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;">über ⌀ Bundesdurchschnitt</p>
+      </div>
+
+    </div><!-- end central visual -->
+
+    <!-- Rating pill below visual -->
+    <div style="display:flex;justify-content:center;margin-top:0.5rem;position:relative;z-index:2;">
+      <div style="display:flex;align-items:center;gap:0.6rem;background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:9999px;padding:0.6rem 1.25rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+        <div style="display:flex;gap:2px;">
+          <span class="material-symbols-outlined" style='font-size:16px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+          <span class="material-symbols-outlined" style='font-size:16px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+          <span class="material-symbols-outlined" style='font-size:16px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+          <span class="material-symbols-outlined" style='font-size:16px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+          <span class="material-symbols-outlined" style='font-size:16px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        </div>
+        <span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:0.95rem;color:#1a1a1a;">4.8</span>
+        <span style="width:1px;height:12px;background:rgba(0,0,0,0.12);"></span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(26,26,26,0.4);">Durchschnittsbewertung</span>
+      </div>
+    </div>
+
+  </div><!-- end max-w-5xl visual -->
+
+  <!-- ── Testimonials ── -->
+  <div class="max-w-5xl mx-auto" style="margin-top:4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;position:relative;z-index:2;">
+    <div class="light-card reveal" style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:1.25rem;padding:1.5rem;transition-delay:0.1s;">
+      <div style="display:flex;gap:1px;margin-bottom:0.75rem;">
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+      </div>
+      <p style="font-size:0.875rem;color:rgba(26,26,26,0.65);line-height:1.7;font-style:italic;margin-bottom:1.25rem;">"Hervorragender Service von der Planung bis zum Anschluss. Die Anlage liefert mehr als versprochen!"</p>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div style="width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(245,176,64,0.1);border:1px solid rgba(245,176,64,0.2);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:900;color:#f5b040;font-size:0.85rem;">M</div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;color:#1a1a1a;margin:0;">Markus Weber</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.35);margin:0;">Neuss, NRW</p></div>
+      </div>
+    </div>
+    <div class="light-card reveal" style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:1.25rem;padding:1.5rem;transition-delay:0.2s;">
+      <div style="display:flex;gap:1px;margin-bottom:0.75rem;">
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+      </div>
+      <p style="font-size:0.875rem;color:rgba(26,26,26,0.65);line-height:1.7;font-style:italic;margin-bottom:1.25rem;">"Endlich unabhängig vom Stromnetz. Der Speicher war die beste Investition des Jahres."</p>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div style="width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(245,176,64,0.1);border:1px solid rgba(245,176,64,0.2);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:900;color:#f5b040;font-size:0.85rem;">S</div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;color:#1a1a1a;margin:0;">Sarah Jenkins</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.35);margin:0;">Düsseldorf, NRW</p></div>
+      </div>
+    </div>
+    <div class="light-card reveal" style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:1.25rem;padding:1.5rem;transition-delay:0.3s;">
+      <div style="display:flex;gap:1px;margin-bottom:0.75rem;">
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+        <span class="material-symbols-outlined" style='font-size:14px;color:#F5C518;font-variation-settings:"FILL" 1;'>star</span>
+      </div>
+      <p style="font-size:0.875rem;color:rgba(26,26,26,0.65);line-height:1.7;font-style:italic;margin-bottom:1.25rem;">"Ästhetisch die schönste Lösung am Markt. Die Full-Black Module sehen auf unserem Dach fantastisch aus."</p>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div style="width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(245,176,64,0.1);border:1px solid rgba(245,176,64,0.2);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:900;color:#f5b040;font-size:0.85rem;">L</div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;color:#1a1a1a;margin:0;">Lukas Müller</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.35);margin:0;">Meerbusch, NRW</p></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<!-- ═══ LIGHT SECTIONS ═══ -->
+<div style="background:#f8f7f5; color:#1a1a1a;">
+
+<!-- Logo Strip -->
+<div style="border-top:1px solid rgba(0,0,0,0.06); padding:16px 0 20px; overflow:hidden; position:relative;">
+  <div style="position:absolute;left:0;top:0;bottom:0;width:6rem;z-index:10;background:linear-gradient(to right,#f8f7f5,transparent);pointer-events:none;"></div>
+  <div style="position:absolute;right:0;top:0;bottom:0;width:6rem;z-index:10;background:linear-gradient(to left,#f8f7f5,transparent);pointer-events:none;"></div>
+  <div id="logo-track" style="display:flex;align-items:center;width:max-content;gap:0;">
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.22em;color:rgba(26,26,26,0.35);">SMA SOLAR</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Mono',monospace;font-weight:700;font-size:18px;letter-spacing:-0.02em;color:rgba(26,26,26,0.35);">BYD</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:15px;letter-spacing:-0.03em;color:rgba(26,26,26,0.35);">FRONIUS</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:11px;letter-spacing:0.18em;color:rgba(26,26,26,0.35);">TRINA SOLAR</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Sans',sans-serif;font-weight:300;font-size:14px;letter-spacing:0.06em;color:rgba(26,26,26,0.35);">KfW Bank</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:17px;letter-spacing:-0.04em;color:rgba(26,26,26,0.35);">E.ON</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Mono',monospace;font-weight:700;font-size:13px;letter-spacing:0.04em;color:rgba(26,26,26,0.35);">LG Energy</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.22em;color:rgba(26,26,26,0.35);">SMA SOLAR</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Mono',monospace;font-weight:700;font-size:18px;letter-spacing:-0.02em;color:rgba(26,26,26,0.35);">BYD</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:15px;letter-spacing:-0.03em;color:rgba(26,26,26,0.35);">FRONIUS</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:11px;letter-spacing:0.18em;color:rgba(26,26,26,0.35);">TRINA SOLAR</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Sans',sans-serif;font-weight:300;font-size:14px;letter-spacing:0.06em;color:rgba(26,26,26,0.35);">KfW Bank</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:17px;letter-spacing:-0.04em;color:rgba(26,26,26,0.35);">E.ON</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+    <div style="display:inline-flex;align-items:center;padding:0 40px;"><span style="font-family:'DM Mono',monospace;font-weight:700;font-size:13px;letter-spacing:0.04em;color:rgba(26,26,26,0.35);">LG Energy</span><span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(245,176,64,0.35);margin-left:40px;"></span></div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<section id="leistungen" style="padding:5rem 1.5rem; max-width:72rem; margin:0 auto;">
+  <div class="reveal">
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:#f5b040;">Leistungen</span>
+    <h2 style="font-family:'DM Sans',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.5rem 0 1rem;line-height:1.05;">Alles aus <em style="font-family:'Georgia',serif;font-style:italic;background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">einer Hand.</em></h2>
+    <p style="color:rgba(26,26,26,0.55);max-width:32rem;line-height:1.7;font-size:1rem;">Von der Montage bis zur Wartung — wir begleiten Sie auf dem gesamten Weg in die Energieunabhängigkeit.</p>
+  </div>
+  <!-- Tab buttons -->
+  <div style="display:flex;gap:0.5rem;margin:2.5rem 0 2rem;flex-wrap:wrap;">
+    <button class="svc-tab active-tab" data-tab="0" style="padding:0.55rem 1.1rem;border-radius:9999px;border:1px solid rgba(245,176,64,0.3);background:rgba(245,176,64,0.1);font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;color:#e07018;cursor:pointer;transition:all 0.25s;">Solar Montage</button>
+    <button class="svc-tab" data-tab="1" style="padding:0.55rem 1.1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);background:transparent;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;color:rgba(26,26,26,0.5);cursor:pointer;transition:all 0.25s;">Wärmebox</button>
+    <button class="svc-tab" data-tab="2" style="padding:0.55rem 1.1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);background:transparent;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;color:rgba(26,26,26,0.5);cursor:pointer;transition:all 0.25s;">Komplettpaket</button>
+    <button class="svc-tab" data-tab="3" style="padding:0.55rem 1.1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);background:transparent;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;color:rgba(26,26,26,0.5);cursor:pointer;transition:all 0.25s;">Wartung</button>
+  </div>
+  <!-- Service panels -->
+  <div id="svc-panels">
+    <div class="svc-panel" data-panel="0" style="display:flex;flex-direction:column;gap:2rem;">
+      <div style="display:grid;grid-template-columns:1fr;gap:2rem;">
+        <div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:rgba(26,26,26,0.4);">Installation</span>
+          <h3 style="font-family:'DM Sans',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.4rem 0 0.8rem;line-height:1.1;">Solar Montage</h3>
+          <p style="color:rgba(26,26,26,0.6);line-height:1.7;max-width:30rem;margin-bottom:1.5rem;">Maßgeschneiderte Solaranlagen von zertifizierten Experten — von der ersten Planung bis zum finalen Netzanschluss.</p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">construction</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Professionelle Installation</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">design_services</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Individuelle Planung &amp; Beratung</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">speed</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Schnelle &amp; saubere Umsetzung</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">verified</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Hochwertige Komponenten</span></div>
+          </div>
+          <button class="cta-button mt-10 text-white px-6 py-3 rounded-full font-label text-xs uppercase tracking-widest active:scale-95" style="margin-top:2rem;background:linear-gradient(135deg,#f5b040,#e07018);border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#2a1600;">Solarplan erstellen</button>
+        </div>
+      </div>
+    </div>
+    <div class="svc-panel" data-panel="1" style="display:none;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:rgba(26,26,26,0.4);">Energie</span>
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.4rem 0 0.8rem;line-height:1.1;">Wärmebox</h3>
+      <p style="color:rgba(26,26,26,0.6);line-height:1.7;max-width:30rem;margin-bottom:1.5rem;">Heizen Sie mit Solarstrom — effizient, sauber und kostenarm. Bis zu 70 % Einsparung gegenüber konventioneller Heizung.</p>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">savings</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Bis zu 70 % Energieeinsparung</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">home_iot_device</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Smart-Home Integration</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">local_fire_department</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Effiziente Wärmegewinnung</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">eco</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Umweltfreundlich &amp; leise</span></div>
+      </div>
+      <button class="cta-button mt-10 text-white px-6 py-3 rounded-full font-label text-xs uppercase tracking-widest active:scale-95" style="margin-top:2rem;background:linear-gradient(135deg,#f5b040,#e07018);border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#2a1600;">Solarplan erstellen</button>
+    </div>
+    <div class="svc-panel" data-panel="2" style="display:none;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:rgba(26,26,26,0.4);">Rundum-Sorglos</span>
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.4rem 0 0.8rem;line-height:1.1;">Komplettpaket</h3>
+      <p style="color:rgba(26,26,26,0.6);line-height:1.7;max-width:30rem;margin-bottom:1.5rem;">Solaranlage, Speicher, Wärmebox und Wartung — alles aus einer Hand. Das Rundum-Sorglos-Paket für maximale Unabhängigkeit.</p>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">battery_charging_full</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">PV-Anlage + Speichersystem</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">thermostat</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Wärmebox inklusive</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">task_alt</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Wartungsvertrag 10 Jahre</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">support_agent</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Ein Ansprechpartner</span></div>
+      </div>
+      <button class="cta-button mt-10 text-white px-6 py-3 rounded-full font-label text-xs uppercase tracking-widest active:scale-95" style="margin-top:2rem;background:linear-gradient(135deg,#f5b040,#e07018);border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#2a1600;">Solarplan erstellen</button>
+    </div>
+    <div class="svc-panel" data-panel="3" style="display:none;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:rgba(26,26,26,0.4);">Service</span>
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.4rem 0 0.8rem;line-height:1.1;">Wartung &amp; Service</h3>
+      <p style="color:rgba(26,26,26,0.6);line-height:1.7;max-width:30rem;margin-bottom:1.5rem;">Wir halten Ihre Anlage dauerhaft auf Höchstleistung — mit proaktiver Inspektion und schnellem Support.</p>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">search</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Regelmäßige Inspektion</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">trending_up</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Leistungsoptimierung</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">support_agent</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">24 / 7 Notfall-Support</span></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">verified</span><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:rgba(26,26,26,0.7);">Garantierte Verfügbarkeit</span></div>
+      </div>
+      <button class="cta-button mt-10 text-white px-6 py-3 rounded-full font-label text-xs uppercase tracking-widest active:scale-95" style="margin-top:2rem;background:linear-gradient(135deg,#f5b040,#e07018);border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#2a1600;">Solarplan erstellen</button>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section id="prozess" style="padding:5rem 1.5rem;background:rgba(0,0,0,0.015);">
+  <div style="max-width:72rem;margin:0 auto;">
+    <div class="reveal">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:#f5b040;">Der Prozess</span>
+      <h2 style="font-family:'DM Sans',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.5rem 0 0.75rem;line-height:1.05;">Von der Anfrage zur Anlage <em style="font-family:'Georgia',serif;font-style:italic;background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">in 7 Tagen.</em></h2>
+      <p style="color:rgba(26,26,26,0.55);max-width:32rem;line-height:1.7;margin-bottom:3rem;">Kein Konzern, keine Warteschleife. Unser Team in Neuss übernimmt alles.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.75rem;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <div style="width:3rem;height:3rem;border-radius:1rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.22);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:900;color:#f5b040;">01</span></div>
+        <h3 style="font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin-bottom:0.5rem;">Kostenlose Beratung</h3>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Unverbindliches Gespräch, Bedarfsanalyse und Dachprüfung – wir hören zu und erstellen das perfekte Konzept.</p>
+      </div>
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.75rem;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <div style="width:3rem;height:3rem;border-radius:1rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.22);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:900;color:#f5b040;">02</span></div>
+        <h3 style="font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin-bottom:0.5rem;">Individuelle Planung</h3>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">3D-Dachansicht, Ertragsberechnung und Förderermittlung — digital, transparent und kostenlos.</p>
+      </div>
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.75rem;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <div style="width:3rem;height:3rem;border-radius:1rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.22);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:900;color:#f5b040;">03</span></div>
+        <h3 style="font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin-bottom:0.5rem;">Saubere Montage</h3>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Zertifizierte Techniker installieren normgerecht und schnell – inklusive Netzanmeldung und Inbetriebnahme.</p>
+      </div>
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.75rem;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <div style="width:3rem;height:3rem;border-radius:1rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.22);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:900;color:#f5b040;">04</span></div>
+        <h3 style="font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin-bottom:0.5rem;">Netzanschluss &amp; Einspeisung</h3>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Wir melden offiziell beim Netzbetreiber an und nehmen alles in Betrieb — Sie verdienen ab Tag 1 mit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Förderung Section -->
+<section id="foerderung" style="padding:5rem 1.5rem;">
+  <div style="max-width:72rem;margin:0 auto;">
+    <div class="reveal">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:#f5b040;">Förderungen &amp; Finanzierung</span>
+      <h2 style="font-family:'DM Sans',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.5rem 0 1rem;line-height:1.05;">Der Staat <em style="font-family:'Georgia',serif;font-style:italic;background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">bezahlt mit</em></h2>
+      <p style="color:rgba(26,26,26,0.6);max-width:36rem;line-height:1.7;margin-bottom:3rem;">Kombinieren Sie staatliche Förderungen intelligent — und machen Sie Ihre Solaranlage zur rentabelsten Investition des Jahrzehnts.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:3rem;">
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.5rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
+        <div style="width:2.75rem;height:2.75rem;border-radius:0.875rem;background:rgba(74,158,255,0.1);border:1px solid rgba(74,158,255,0.25);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:#4a9eff;">account_balance</span></div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;">KfW 270</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.4);">Zinsgünstiges Darlehen</p></div>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Bis zu 150.000 € Kredit für Ihre Photovoltaikanlage zu attraktiven Konditionen der KfW.</p>
+      </div>
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.5rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
+        <div style="width:2.75rem;height:2.75rem;border-radius:0.875rem;background:rgba(245,176,64,0.1);border:1px solid rgba(245,176,64,0.25);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:#f5b040;">euro</span></div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;">0 % MwSt.</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.4);">Seit Jan. 2023</p></div>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Solaranlagen und Speicher vollständig von der Mehrwertsteuer befreit — direkter Preisvorteil von 19 %.</p>
+      </div>
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.5rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
+        <div style="width:2.75rem;height:2.75rem;border-radius:0.875rem;background:rgba(224,112,24,0.1);border:1px solid rgba(224,112,24,0.25);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:#e07018;">receipt_long</span></div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;">Steuerfreiheit</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.4);">Bis 30 kWp</p></div>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Einnahmen aus der Einspeisung sind steuerbefreit. Kein Gewerbeschein, keine Steuererklärung.</p>
+      </div>
+      <div class="reveal light-card" style="border-radius:1.5rem;padding:1.5rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:1rem;">
+        <div style="width:2.75rem;height:2.75rem;border-radius:0.875rem;background:rgba(232,146,48,0.1);border:1px solid rgba(232,146,48,0.25);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:20px;color:#e89230;">electric_bolt</span></div>
+        <div><p style="font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;">EEG-Vergütung</p><p style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:rgba(26,26,26,0.4);">20 Jahre garantiert</p></div>
+        <p style="font-size:0.875rem;color:rgba(26,26,26,0.55);line-height:1.65;">Überschüssigen Strom einspeisen und dafür vergütet werden — gesetzlich für 20 Jahre festgeschrieben.</p>
+      </div>
+    </div>
+    <!-- Partners -->
+    <div class="reveal">
+      <p style="text-align:center;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:rgba(26,26,26,0.35);margin-bottom:1.25rem;">Zertifizierte Markenpartner</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;background:rgba(0,0,0,0.02);border:1px solid rgba(0,0,0,0.06);border-radius:1rem;padding:1.25rem 1.5rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);opacity:0.45;"><span class="material-symbols-outlined" style="font-size:16px;color:#f5b040;">solar_power</span><span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a1a1a;">SMA Solar</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);opacity:0.45;"><span class="material-symbols-outlined" style="font-size:16px;color:#f5b040;">electric_bolt</span><span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a1a1a;">Fronius</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);opacity:0.45;"><span class="material-symbols-outlined" style="font-size:16px;color:#f5b040;">battery_charging_full</span><span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a1a1a;">BYD Energy</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);opacity:0.45;"><span class="material-symbols-outlined" style="font-size:16px;color:#f5b040;">bolt</span><span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a1a1a;">LG Energy</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);opacity:0.45;"><span class="material-symbols-outlined" style="font-size:16px;color:#f5b040;">wb_sunny</span><span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a1a1a;">Enphase</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;border:1px solid rgba(0,0,0,0.08);opacity:0.45;"><span class="material-symbols-outlined" style="font-size:16px;color:#f5b040;">thermostat</span><span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a1a1a;">Viessmann</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why STN Solar / Comparison -->
+<section id="vergleich" style="padding:5rem 1.5rem;background:rgba(0,0,0,0.015);">
+  <div style="max-width:60rem;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:#f5b040;">Warum STN Solar?</span>
+      <h2 style="font-family:'DM Sans',sans-serif;font-size:clamp(1.9rem,5vw,3.2rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.5rem auto 1rem;line-height:1.05;">Regional. Persönlich. <em style="font-family:'Georgia',serif;font-style:italic;background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Komplett.</em></h2>
+      <p style="color:rgba(26,26,26,0.6);max-width:36rem;margin:0 auto;line-height:1.7;">Wir sind kein anonymer Großkonzern. Wir sind Ihr Solarpartner in NRW — 150+ montierte Anlagen, ein festes Team, von der Anfrage bis zur Inbetriebnahme in unter <span style="color:#f5b040;font-weight:700;">7 Tagen.</span></p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2.5rem;">
+      <div class="reveal light-card" style="border-radius:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:0.75rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.18);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">person</span></div><p style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin:0;">Ein Ansprechpartner</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.6);line-height:1.65;margin:0;">Ihr fester Ansprechpartner — kein Weiterleiten, kein Ticketsystem.</p></div>
+      <div class="reveal light-card" style="border-radius:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:0.75rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.18);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">bolt</span></div><p style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin:0;">Inbetrieb in 7 Tagen*</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.6);line-height:1.65;margin:0;">Kein bürokratischer Apparat — von der Planung bis zum ersten selbsterzeugten Strom.</p></div>
+      <div class="reveal light-card" style="border-radius:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:0.75rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.18);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">location_on</span></div><p style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin:0;">Regional in NRW</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.6);line-height:1.65;margin:0;">150+ installierte Anlagen. Wir kennen die lokalen Bedingungen und Fördermöglichkeiten.</p></div>
+      <div class="reveal light-card" style="border-radius:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:0.75rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.18);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">construction</span></div><p style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin:0;">Eigene Monteure</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.6);line-height:1.65;margin:0;">Keine Subunternehmer. Gleichbleibende Qualität und direkte Haftung.</p></div>
+      <div class="reveal light-card" style="border-radius:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:0.75rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.18);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">receipt_long</span></div><p style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin:0;">Fairer Festpreis</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.6);line-height:1.65;margin:0;">Was wir anbieten, das kostet es auch. Kein Kleingedrucktes.</p></div>
+      <div class="reveal light-card" style="border-radius:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(0,0,0,0.07);display:flex;flex-direction:column;gap:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:0.75rem;background:rgba(245,176,64,0.08);border:1px solid rgba(245,176,64,0.18);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:18px;color:#f5b040;">support_agent</span></div><p style="font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:900;letter-spacing:-0.02em;color:#1a1a1a;margin:0;">Langfristiger Service</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.6);line-height:1.65;margin:0;">In 10 Jahren noch Ihr Ansprechpartner — als lokales Unternehmen.</p></div>
+    </div>
+    <!-- CTA strip -->
+    <div class="reveal" style="border-radius:1.25rem;padding:1.5rem 2rem;background:rgba(245,176,64,0.05);border:1px solid rgba(245,176,64,0.15);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem;">
+      <div><p style="font-family:'DM Sans',sans-serif;font-size:clamp(1.1rem,2.5vw,1.4rem);font-weight:900;letter-spacing:-0.03em;color:#1a1a1a;margin:0 0 0.25rem;">Überzeugt? Kostenlos &amp; unverbindlich anfragen.</p><p style="font-size:0.75rem;color:rgba(26,26,26,0.5);margin:0;">Kein Callcenter. Direkt Ihr persönlicher Ansprechpartner.</p></div>
+      <button class="cta-button" style="padding:0.75rem 1.5rem;border-radius:9999px;background:linear-gradient(135deg,#f5b040,#e07018);border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2a1600;white-space:nowrap;flex-shrink:0;">☀ Jetzt kostenlos anfragen</button>
+    </div>
+    <p style="text-align:center;font-size:9px;color:rgba(26,26,26,0.35);margin-top:1rem;">*7 Tage bei optimalen Voraussetzungen (Dachbeschaffenheit, Netzanmeldung, Genehmigungslage).</p>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" style="padding:5rem 1.5rem;">
+  <div style="max-width:48rem;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:#f5b040;">Häufige Fragen</span>
+      <h2 style="font-family:'DM Sans',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-0.04em;color:#1a1a1a;margin:0.5rem 0 0;line-height:1.05;">Alles Wichtige, <em style="font-family:'Georgia',serif;font-style:italic;background:linear-gradient(135deg,#f5b040,#e07018);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">klar beantwortet</em></h2>
+    </div>
+    <div id="faq-list" style="display:flex;flex-direction:column;gap:0.75rem;">
+      <div class="faq-item reveal" style="border-radius:1rem;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <button class="faq-btn" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;"><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:-0.01em;color:#1a1a1a;">Wie lange dauert die Installation einer Solaranlage?</span><span class="faq-icon material-symbols-outlined" style="font-size:20px;color:rgba(26,26,26,0.4);flex-shrink:0;transition:transform 0.3s;">add</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);"><p style="padding:0 1.5rem 1.25rem;font-size:0.875rem;color:rgba(26,26,26,0.6);line-height:1.7;margin:0;">Die Montage selbst dauert in der Regel 1–2 Tage. Dazu kommt die Vorlaufzeit für Planung, Genehmigung und Netzanmeldung, die je nach Region 2–8 Wochen in Anspruch nehmen kann. Wir kümmern uns um den gesamten Prozess.</p></div>
+      </div>
+      <div class="faq-item reveal" style="border-radius:1rem;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <button class="faq-btn" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;"><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:-0.01em;color:#1a1a1a;">Lohnt sich eine Solaranlage auch bei bewölktem Wetter?</span><span class="faq-icon material-symbols-outlined" style="font-size:20px;color:rgba(26,26,26,0.4);flex-shrink:0;transition:transform 0.3s;">add</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);"><p style="padding:0 1.5rem 1.25rem;font-size:0.875rem;color:rgba(26,26,26,0.6);line-height:1.7;margin:0;">Ja. Moderne Hochleistungsmodule produzieren auch bei diffusem Licht oder Bewölkung signifikant Strom. In Deutschland sind durchschnittlich 950–1.300 Volllaststunden pro Jahr realistisch.</p></div>
+      </div>
+      <div class="faq-item reveal" style="border-radius:1rem;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <button class="faq-btn" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;"><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:-0.01em;color:#1a1a1a;">Welche Garantien erhalte ich auf die Anlage?</span><span class="faq-icon material-symbols-outlined" style="font-size:20px;color:rgba(26,26,26,0.4);flex-shrink:0;transition:transform 0.3s;">add</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);"><p style="padding:0 1.5rem 1.25rem;font-size:0.875rem;color:rgba(26,26,26,0.6);line-height:1.7;margin:0;">Sie erhalten 25 Jahre Garantie auf die Solarmodule, 10 Jahre auf Wechselrichter und Batteriespeicher — dazu unsere eigene Installationsgarantie. Sie sind rundum abgesichert.</p></div>
+      </div>
+      <div class="faq-item reveal" style="border-radius:1rem;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <button class="faq-btn" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;"><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:-0.01em;color:#1a1a1a;">Kann ich mein Elektroauto mit der Solaranlage laden?</span><span class="faq-icon material-symbols-outlined" style="font-size:20px;color:rgba(26,26,26,0.4);flex-shrink:0;transition:transform 0.3s;">add</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);"><p style="padding:0 1.5rem 1.25rem;font-size:0.875rem;color:rgba(26,26,26,0.6);line-height:1.7;margin:0;">Absolut. Mit unserer Wallbox-Integration laden Sie Ihr E-Fahrzeug direkt mit selbst erzeugtem Solarstrom – kostenlos und emissionsfrei. Das Energiemanagement priorisiert automatisch den Eigenverbrauch.</p></div>
+      </div>
+      <div class="faq-item reveal" style="border-radius:1rem;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <button class="faq-btn" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;"><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:-0.01em;color:#1a1a1a;">Brauche ich eine Baugenehmigung für die Solaranlage?</span><span class="faq-icon material-symbols-outlined" style="font-size:20px;color:rgba(26,26,26,0.4);flex-shrink:0;transition:transform 0.3s;">add</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);"><p style="padding:0 1.5rem 1.25rem;font-size:0.875rem;color:rgba(26,26,26,0.6);line-height:1.7;margin:0;">In den meisten Bundesländern sind Aufdach-Anlagen bis zu einer bestimmten Größe genehmigungsfrei. Wir prüfen die lokalen Vorschriften und übernehmen alle nötigen Anmeldungen beim Netzbetreiber.</p></div>
+      </div>
+      <div class="faq-item reveal" style="border-radius:1rem;overflow:hidden;background:#fff;border:1px solid rgba(0,0,0,0.07);">
+        <button class="faq-btn" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;"><span style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:-0.01em;color:#1a1a1a;">Was passiert bei Stromausfall – hat der Speicher Notstromfunktion?</span><span class="faq-icon material-symbols-outlined" style="font-size:20px;color:rgba(26,26,26,0.4);flex-shrink:0;transition:transform 0.3s;">add</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);"><p style="padding:0 1.5rem 1.25rem;font-size:0.875rem;color:rgba(26,26,26,0.6);line-height:1.7;margin:0;">Ja, unser Speichersystem bietet optionale Notstromversorgung. Im Falle eines Netzausfalls versorgt der Speicher Ihr Haus automatisch weiter. Die Umschaltzeit beträgt unter 20 Millisekunden.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- end light sections -->
+
+<!-- Bottom Navigation (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 backdrop-blur-2xl md:hidden" style="background:rgba(248,247,245,0.92);border-top:1px solid rgba(0,0,0,0.08);box-shadow:0px -10px 40px rgba(0,0,0,0.08);">
+<a class="flex flex-col items-center justify-center bg-[#ebc153] text-[#131313] rounded-full p-4 scale-110 -translate-y-4 shadow-[0_0_20px_rgba(235,193,83,0.4)]" href="#hero">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>home_max</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1 font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 transition-all" style="color:rgba(26,26,26,0.45);" href="#leistungen">
+<span class="material-symbols-outlined">solar_power</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Produkte</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 transition-all" style="color:rgba(26,26,26,0.45);" href="#prozess">
+<span class="material-symbols-outlined">battery_charging_full</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Prozess</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 transition-all" style="color:rgba(26,26,26,0.45);" href="#faq">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">FAQ</span>
+</a>
+</nav>
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-10 py-16 px-10 border-t mt-auto pb-40 md:pb-16 reveal" style="background:#f8f7f5;border-color:rgba(0,0,0,0.07);position:relative;overflow:hidden;">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-2">
+  <span class="material-symbols-outlined" style="color:#f5b040;font-size:1.5rem;">wb_sunny</span>
+  <span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:1.5rem;letter-spacing:-0.05em;color:rgba(26,26,26,0.7);">STN Solar</span>
+</div>
+<p class="font-label text-[9px] tracking-widest uppercase font-bold text-center md:text-left" style="color:rgba(26,26,26,0.4);">
+  © 2026 STN Solar · Neuss, NRW · Seit 2018
+</p>
+<div style="display:flex;gap:0.75rem;">
+  <a href="/" aria-label="Website" style="width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:16px;color:rgba(26,26,26,0.5);">language</span></a>
+  <a href="mailto:info@stn-solar.de" aria-label="Email" style="width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:16px;color:rgba(26,26,26,0.5);">mail</span></a>
+  <a href="tel:+491234567890" aria-label="Telefon" style="width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined" style="font-size:16px;color:rgba(26,26,26,0.5);">phone</span></a>
+</div>
+</div>
+<nav class="flex flex-wrap justify-center gap-10">
+<a class="font-label text-[10px] uppercase tracking-[0.2em] font-bold transition-colors" style="color:rgba(26,26,26,0.5);" href="#">Referenzen</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] font-bold transition-colors" style="color:rgba(26,26,26,0.5);" href="#">Spar-Rechner</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] font-bold transition-colors" style="color:rgba(26,26,26,0.5);" href="#">Impressum</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] font-bold transition-colors" style="color:rgba(26,26,26,0.5);" href="#">Datenschutz</a>
+</nav>
+<div class="text-center md:text-right">
+  <p class="text-xs font-bold" style="font-family:'Space Grotesk',sans-serif;color:rgba(26,26,26,0.4);">Made with ☀ in Deutschland</p>
+  <p class="text-[9px] uppercase tracking-widest mt-1" style="font-family:'Space Grotesk',sans-serif;color:rgba(26,26,26,0.3);">Energie. Heute. Morgen.</p>
+</div>
+<!-- Large watermark text -->
+<div style="position:absolute;bottom:-0.15em;left:0;right:0;display:flex;justify-content:center;pointer-events:none;overflow:hidden;">
+  <span style="font-family:'DM Sans',sans-serif;font-weight:900;font-size:clamp(6rem,18vw,16rem);letter-spacing:-0.06em;opacity:0.025;line-height:1;color:#1a1a1a;">SOLAR</span>
+</div>
+</footer>
+<script>
+    // Reveal Animations
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Counter Logic
+    const counterElement = document.getElementById('customer-counter');
+    const counterTrigger = document.getElementById('counter-trigger');
+    let hasCounted = false;
+    const countUp = (target, duration) => {
+        let current = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                counterElement.textContent = target.toLocaleString();
+                clearInterval(timer);
+            } else {
+                counterElement.textContent = Math.floor(current).toLocaleString();
+            }
+        }, 16);
+    };
+    const counterObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasCounted) { countUp(1000, 2000); hasCounted = true; }
+    }, { threshold: 0.5 });
+    if (counterTrigger) counterObserver.observe(counterTrigger);
+
+    // Product Slider & Weather Icon Sync
+    (function() {
+        const slider = document.getElementById('product-slider');
+        const slides = slider.querySelectorAll('.slide');
+        const dots = slider.querySelectorAll('.slider-dot');
+        const weatherIcon = document.getElementById('weather-icon');
+        const weatherMap = ['wb_sunny', 'thunderstorm', 'cloudy_snowing'];
+        let currentSlide = 0;
+
+        function updateSlider(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('slide-visible', i === index);
+                slide.classList.toggle('slide-hidden', i !== index);
+                dots[i].classList.toggle('active', i === index);
+                dots[i].classList.toggle('inactive', i !== index);
+            });
+            weatherIcon.textContent = weatherMap[index];
+            currentSlide = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => updateSlider(index));
+        });
+
+        setInterval(() => { updateSlider((currentSlide + 1) % slides.length); }, 6000);
+    })();
+
+    // Review & Benefit Tickers
+    (function() {
+        const rSlides = document.querySelectorAll('.review-slide');
+        let rCurrent = 0;
+        setInterval(() => {
+            rSlides[rCurrent].classList.replace('opacity-100', 'opacity-0');
+            rSlides[rCurrent].classList.add('translate-x-[-20px]');
+            rCurrent = (rCurrent + 1) % rSlides.length;
+            rSlides[rCurrent].classList.replace('opacity-0', 'opacity-100');
+            rSlides[rCurrent].classList.remove('translate-x-8', 'translate-x-[-20px]');
+            rSlides[rCurrent].classList.add('translate-x-0');
+            setTimeout(() => { rSlides.forEach((s, i) => { if(i !== rCurrent) { s.classList.remove('translate-x-[-20px]'); s.classList.add('translate-x-8'); } }); }, 700);
+        }, 5000);
+
+        const benefits = document.querySelectorAll('.benefit-text');
+        const graph = document.getElementById('graph-line');
+        let bCurrent = 0;
+        setTimeout(() => { if(graph) graph.style.strokeDashoffset = '0'; }, 800);
+        setInterval(() => {
+            benefits[bCurrent].classList.replace('opacity-100', 'opacity-0');
+            benefits[bCurrent].classList.replace('translate-y-0', 'translate-y-[-20px]');
+            bCurrent = (bCurrent + 1) % benefits.length;
+            benefits[bCurrent].classList.replace('opacity-0', 'opacity-100');
+            benefits[bCurrent].classList.replace('translate-y-8', 'translate-y-0');
+            setTimeout(() => { benefits.forEach((b, i) => { if(i !== bCurrent) { b.classList.remove('translate-y-[-20px]'); b.classList.add('translate-y-8'); } }); }, 700);
+        }, 4000);
+    })();
+
+    // Service tabs
+    (function() {
+        const tabs = document.querySelectorAll('.svc-tab');
+        const panels = document.querySelectorAll('.svc-panel');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const idx = +tab.dataset.tab;
+                tabs.forEach(t => { t.classList.remove('active-tab'); t.style.background='transparent'; t.style.borderColor='rgba(0,0,0,0.08)'; t.style.color='rgba(26,26,26,0.5)'; });
+                tab.classList.add('active-tab');
+                panels.forEach((p, i) => p.style.display = i === idx ? 'block' : 'none');
+            });
+        });
+    })();
+
+    // FAQ accordion
+    (function() {
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = btn.querySelector('.faq-icon');
+                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+                // Close all
+                document.querySelectorAll('.faq-answer').forEach(a => { a.style.maxHeight = '0px'; });
+                document.querySelectorAll('.faq-icon').forEach(ic => { ic.style.transform = 'rotate(0deg)'; ic.style.color = 'rgba(26,26,26,0.4)'; });
+                document.querySelectorAll('.faq-item').forEach(it => { it.style.background = '#fff'; it.style.borderColor = 'rgba(0,0,0,0.07)'; });
+                if (!isOpen) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(45deg)';
+                    icon.style.color = '#f5b040';
+                    item.style.background = 'rgba(245,176,64,0.04)';
+                    item.style.borderColor = 'rgba(245,176,64,0.18)';
+                }
+            });
+        });
+    })();
+</script>
+</body></html>
